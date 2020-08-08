@@ -7,9 +7,13 @@ struct node
 	struct node* next;
 };
 
-struct node *createList();
-void appendData(struct node* root, int data);
-void printList(struct node* root);
-void freeList(struct node* root);
+typedef struct node Node;
+
+Node * createList();
+Node * pushData(Node *root, int data);
+Node * popData(Node *root, int *data);
+void appendData(Node *root, int data);
+void printList(Node *root);
+void freeList(Node *root);
 
 #endif
